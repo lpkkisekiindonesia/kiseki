@@ -1,0 +1,118 @@
+{
+    "info": {
+        "name": "Kiseki LPK Web Routes",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Public Pages",
+            "item": [
+                {
+                    "name": "Home",
+                    "request": { "method": "GET", "url": "{{base_url}}/" }
+                },
+                {
+                    "name": "About",
+                    "request": { "method": "GET", "url": "{{base_url}}/about" }
+                },
+                {
+                    "name": "Programs",
+                    "request": { "method": "GET", "url": "{{base_url}}/programs" }
+                },
+                {
+                    "name": "Gallery",
+                    "request": { "method": "GET", "url": "{{base_url}}/gallery" }
+                },
+                {
+                    "name": "Achievements",
+                    "request": { "method": "GET", "url": "{{base_url}}/achievements" }
+                },
+                {
+                    "name": "Contact Page",
+                    "request": { "method": "GET", "url": "{{base_url}}/contact" }
+                },
+                {
+                    "name": "Submit Contact (Kirim Pesan)",
+                    "request": {
+                        "method": "POST",
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                { "key": "name", "value": "Test User", "type": "text" },
+                                { "key": "email", "value": "test@example.com", "type": "text" },
+                                { "key": "subject", "value": "Pertanyaan", "type": "text" },
+                                { "key": "message", "value": "Halo, saya ingin bertanya.", "type": "text" }
+                            ]
+                        },
+                        "url": "{{base_url}}/contact"
+                    }
+                },
+                {
+                    "name": "Pendaftaran Page",
+                    "request": { "method": "GET", "url": "{{base_url}}/pendaftaran" }
+                },
+                {
+                    "name": "Submit Pendaftaran",
+                    "request": {
+                        "method": "POST",
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                { "key": "name", "value": "Calon Siswa", "type": "text" },
+                                { "key": "email", "value": "siswa@example.com", "type": "text" },
+                                { "key": "phone", "value": "081234567890", "type": "text" },
+                                { "key": "program", "value": "Program Magang Reguler", "type": "text" },
+                                { "key": "message", "value": "Ingin daftar magang ke Jepang", "type": "text" },
+                                { "key": "captcha", "value": "12", "type": "text", "description": "Jawaban dari soal matematika di view" }
+                            ]
+                        },
+                        "url": "{{base_url}}/pendaftaran"
+                    }
+                },
+                {
+                    "name": "Artikel Index",
+                    "request": { "method": "GET", "url": "{{base_url}}/berita" }
+                },
+                {
+                    "name": "Artikel Show",
+                    "request": { "method": "GET", "url": "{{base_url}}/berita/contoh-slug-artikel" }
+                }
+            ]
+        },
+        {
+            "name": "Admin Pages",
+            "item": [
+                {
+                    "name": "Dashboard",
+                    "request": { "method": "GET", "url": "{{base_url}}/admin/dashboard" }
+                },
+                {
+                    "name": "Admin Gallery",
+                    "request": { "method": "GET", "url": "{{base_url}}/admin/gallery" }
+                },
+                {
+                    "name": "Admin Achievements",
+                    "request": { "method": "GET", "url": "{{base_url}}/admin/achievements" }
+                },
+                {
+                    "name": "Admin Articles",
+                    "request": { "method": "GET", "url": "{{base_url}}/admin/articles" }
+                },
+                {
+                    "name": "Admin Registrations",
+                    "request": { "method": "GET", "url": "{{base_url}}/admin/registrations" }
+                },
+                {
+                    "name": "Admin Contacts",
+                    "request": { "method": "GET", "url": "{{base_url}}/admin/contacts" }
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://127.0.0.1:8000"
+        }
+    ]
+}
