@@ -18,6 +18,11 @@
             <img src="{{ asset('images/logo.jpeg') }}" alt="Logo LPK Kiseki" style="height: 45px; border-radius: 5px; object-fit: cover;">
             LPK KISEKI <span>INDONESIA</span>
         </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <ul class="nav-links">
             <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">{{ __('Home') }}</a></li>
             <li><a href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'active' : '' }}">{{ __('Tentang Kami') }}</a></li>
@@ -138,6 +143,17 @@
             easing: 'ease-in-out',
             once: true,
             offset: 50
+        });
+
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenu.addEventListener('click', function() {
+                mobileMenu.classList.toggle('is-active');
+                navLinks.classList.toggle('active');
+            });
         });
     </script>
 </body>
