@@ -149,10 +149,24 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = document.querySelector('.nav-links');
+            const navbar = document.querySelector('.navbar');
 
             mobileMenu.addEventListener('click', function() {
                 mobileMenu.classList.toggle('is-active');
                 navLinks.classList.toggle('active');
+            });
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    // Close the menu if we scroll back to top and we are on desktop
+                    if (window.innerWidth > 1024 && mobileMenu.classList.contains('is-active')) {
+                        mobileMenu.classList.remove('is-active');
+                        navLinks.classList.remove('active');
+                    }
+                }
             });
         });
     </script>

@@ -503,6 +503,48 @@ footer {
     margin-bottom: 0;
 }
 
+/* Scrolled Navbar (Hamburger Menu for all devices) */
+.navbar.scrolled {
+    padding: 1rem 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+.navbar.scrolled .menu-toggle {
+    display: flex;
+}
+.navbar.scrolled .nav-links { 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 999;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+.navbar.scrolled .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+.navbar.scrolled .nav-links li {
+    margin: 0 !important;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+.navbar.scrolled .nav-links a {
+    font-size: 1rem;
+    display: block;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .navbar { 
