@@ -41,18 +41,12 @@
                     class="{{ request()->routeIs('contact') ? 'active' : '' }}">{{ __('Kontak') }}</a></li>
             <li><a href="{{ route('register') }}" class="{{ request()->routeIs('register') ? 'active' : '' }}"
                     style="color: var(--accent-color); font-weight: bold;">{{ __('Pendaftaran') }}</a></li>
-            <li style="margin-left: 1rem; display: flex; align-items: center;">
-                <a href="{{ route('lang.switch', 'id') }}" style="padding: 0.2rem; display: flex; align-items: center;"
-                    title="Bahasa Indonesia">
-                    <img src="https://flagcdn.com/w40/id.png" width="24" alt="Indonesia"
-                        style="border: 1px solid #ccc; border-radius: 3px;">
+            <li class="lang-switcher">
+                <a href="{{ route('lang.switch', 'id') }}" title="Bahasa Indonesia">
+                    <img src="https://flagcdn.com/w40/id.png" width="24" alt="Indonesia">
                 </a>
-            </li>
-            <li style="display: flex; align-items: center;">
-                <a href="{{ route('lang.switch', 'ja') }}" style="padding: 0.2rem; display: flex; align-items: center;"
-                    title="日本語">
-                    <img src="https://flagcdn.com/w40/jp.png" width="24" alt="Japan"
-                        style="border: 1px solid #ccc; border-radius: 3px;">
+                <a href="{{ route('lang.switch', 'ja') }}" title="日本語">
+                    <img src="https://flagcdn.com/w40/jp.png" width="24" alt="Japan">
                 </a>
             </li>
         </ul>
