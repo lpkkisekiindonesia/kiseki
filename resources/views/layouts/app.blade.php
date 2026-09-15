@@ -7,6 +7,11 @@
     <title>@yield('title', 'Kiseki | LPK Jepang')</title>
     <meta name="description"
         content="Kiseki - Lembaga Pelatihan Kerja (LPK) Bahasa Jepang Profesional. Wujudkan mimpimu bekerja dan belajar di Jepang.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('images/logo.jpeg') }}" type="image/jpeg">
+    <link rel="shortcut icon" href="{{ asset('images/logo.jpeg') }}" type="image/jpeg">
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
