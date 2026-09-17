@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <body>
 
@@ -32,16 +34,26 @@
         <ul class="nav-links">
             <li><a href="{{ route('home') }}"
                     class="{{ request()->routeIs('home') ? 'active' : '' }}">{{ __('Home') }}</a></li>
-            <li><a href="{{ route('about') }}"
-                    class="{{ request()->routeIs('about') ? 'active' : '' }}">{{ __('Tentang Kami') }}</a></li>
+            
+            <li class="dropdown">
+                <a href="#" class="{{ request()->routeIs('about') || request()->routeIs('teachers') || request()->routeIs('achievements') ? 'active' : '' }}" onclick="event.preventDefault()">{{ __('Profil Kami') }} &nbsp;<i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                <div class="dropdown-content">
+                    <a href="{{ route('about') }}">{{ __('Tentang Kami') }}</a>
+                    <a href="{{ route('teachers') }}">{{ __('Pengajar') }}</a>
+                    <a href="{{ route('achievements') }}">{{ __('Pencapaian') }}</a>
+                </div>
+            </li>
+
             <li><a href="{{ route('programs') }}"
                     class="{{ request()->routeIs('programs') ? 'active' : '' }}">{{ __('Program') }}</a></li>
-            <li><a href="{{ route('articles.index') }}"
-                    class="{{ request()->routeIs('articles.*') ? 'active' : '' }}">{{ __('Berita') }}</a></li>
-            <li><a href="{{ route('gallery') }}"
-                    class="{{ request()->routeIs('gallery') ? 'active' : '' }}">{{ __('Galeri Event') }}</a></li>
-            <li><a href="{{ route('achievements') }}"
-                    class="{{ request()->routeIs('achievements') ? 'active' : '' }}">{{ __('Pencapaian') }}</a></li>
+            
+            <li class="dropdown">
+                <a href="#" class="{{ request()->routeIs('articles.*') || request()->routeIs('gallery') ? 'active' : '' }}" onclick="event.preventDefault()">{{ __('Informasi') }} &nbsp;<i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                <div class="dropdown-content">
+                    <a href="{{ route('articles.index') }}">{{ __('Berita') }}</a>
+                    <a href="{{ route('gallery') }}">{{ __('Galeri Event') }}</a>
+                </div>
+            </li>
             <li><a href="{{ route('contact') }}"
                     class="{{ request()->routeIs('contact') ? 'active' : '' }}">{{ __('Kontak') }}</a></li>
             <li><a href="{{ route('register') }}" class="{{ request()->routeIs('register') ? 'active' : '' }}"

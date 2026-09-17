@@ -18,6 +18,14 @@
                     <li>{{ __('Percakapan (Kaiwa)') }}</li>
                     <li>{{ __('Latihan pendengaran (Choukai)') }}</li>
                 </ul>
+                
+                <h4 style="margin-top: 1.5rem; color: var(--dark-bg); font-size: 1rem;">{{ __('Syarat Pendaftaran:') }}</h4>
+                <ul style="margin-top: 0.5rem; color: var(--text-muted); padding-left: 1.5rem; font-size: 0.9rem;">
+                    <li>{{ __('Minimal lulusan SMA/SMK sederajat') }}</li>
+                    <li>{{ __('Usia minimal 17 tahun') }}</li>
+                    <li>{{ __('Sehat jasmani dan rohani') }}</li>
+                    <li>{{ __('Memiliki motivasi tinggi untuk belajar') }}</li>
+                </ul>
             </div>
         </div>
         <div class="card" data-aos="fade-up" data-aos-delay="200">
@@ -31,6 +39,14 @@
                     <li>{{ __('Budaya Kerja Jepang (Hourensou)') }}</li>
                     <li>{{ __('Persiapan Wawancara') }}</li>
                 </ul>
+
+                <h4 style="margin-top: 1.5rem; color: var(--dark-bg); font-size: 1rem;">{{ __('Syarat Pendaftaran:') }}</h4>
+                <ul style="margin-top: 0.5rem; color: var(--text-muted); padding-left: 1.5rem; font-size: 0.9rem;">
+                    <li>{{ __('Laki-laki / Perempuan, usia 18 - 25 tahun') }}</li>
+                    <li>{{ __('Tinggi badan min. 160cm (L) / 150cm (P)') }}</li>
+                    <li>{{ __('Tidak buta warna dan tidak bertato') }}</li>
+                    <li>{{ __('Mendapat izin resmi dari orang tua / wali') }}</li>
+                </ul>
             </div>
         </div>
         <div class="card" data-aos="fade-up" data-aos-delay="300">
@@ -42,6 +58,14 @@
                     <li>{{ __('Persiapan ujian bahasa Jepang JFT-Basic') }}</li>
                     <li>{{ __('Persiapan ujian skill teknis (Caregiver, Manufaktur, Pertanian, dll)') }}</li>
                     <li>{{ __('Bimbingan dokumen dan keberangkatan') }}</li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; color: var(--dark-bg); font-size: 1rem;">{{ __('Syarat Pendaftaran:') }}</h4>
+                <ul style="margin-top: 0.5rem; color: var(--text-muted); padding-left: 1.5rem; font-size: 0.9rem;">
+                    <li>{{ __('Usia 18 - 35 tahun') }}</li>
+                    <li>{{ __('Lulus ujian JFT-Basic A2 atau JLPT N4') }}</li>
+                    <li>{{ __('Lulus ujian SSW (Skill Test) sesuai bidang') }}</li>
+                    <li>{{ __('Bagi eks-magang, melampirkan sertifikat JITCO/Senmonkyuu') }}</li>
                 </ul>
             </div>
         </div>

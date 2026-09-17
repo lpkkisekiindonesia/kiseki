@@ -48,6 +48,60 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section style="background-color: var(--light-bg); padding-top: 4rem;">
+        <h2 class="section-title" data-aos="fade-up">{{ __('Kisah Sukses Alumni') }}</h2>
+        <div class="grid">
+            <div class="card" style="padding: 2rem;" data-aos="fade-up" data-aos-delay="100">
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <img src="https://ui-avatars.com/api/?name=Andi+Saputra&background=f9a623&color=fff&rounded=true" alt="Andi" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px;">
+                    <div>
+                        <h4 style="margin: 0; color: var(--dark-bg);">Andi Saputra</h4>
+                        <span style="font-size: 0.85rem; color: var(--text-muted);">{{ __('Pekerja Manufaktur di Osaka') }}</span>
+                    </div>
+                </div>
+                <p style="font-style: italic; color: var(--text-main); font-size: 0.95rem;">
+                    "{{ __('Berkat LPK Kiseki, saya bisa mewujudkan mimpi bekerja di Jepang. Pelatihan fisiknya sangat membantu saya beradaptasi dengan ritme kerja yang disiplin.') }}"
+                </p>
+                <div style="color: var(--accent-color); margin-top: 1rem; font-size: 0.9rem;">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="card" style="padding: 2rem;" data-aos="fade-up" data-aos-delay="200">
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <img src="https://ui-avatars.com/api/?name=Siti+Nurhaliza&background=2a3d3c&color=fff&rounded=true" alt="Siti" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px;">
+                    <div>
+                        <h4 style="margin: 0; color: var(--dark-bg);">Siti Nurhaliza</h4>
+                        <span style="font-size: 0.85rem; color: var(--text-muted);">{{ __('Caregiver di Tokyo') }}</span>
+                    </div>
+                </div>
+                <p style="font-style: italic; color: var(--text-main); font-size: 0.95rem;">
+                    "{{ __('Belajar bahasa Jepang di sini sangat menyenangkan. Senseinya ramah dan metode belajarnya mudah dipahami. Saya lulus N4 hanya dalam 4 bulan!') }}"
+                </p>
+                <div style="color: var(--accent-color); margin-top: 1rem; font-size: 0.9rem;">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="card" style="padding: 2rem;" data-aos="fade-up" data-aos-delay="300">
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <img src="https://ui-avatars.com/api/?name=Bagas+Pratama&background=f9a623&color=fff&rounded=true" alt="Bagas" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 15px;">
+                    <div>
+                        <h4 style="margin: 0; color: var(--dark-bg);">Bagas Pratama</h4>
+                        <span style="font-size: 0.85rem; color: var(--text-muted);">{{ __('SSW Pertanian di Hokkaido') }}</span>
+                    </div>
+                </div>
+                <p style="font-style: italic; color: var(--text-main); font-size: 0.95rem;">
+                    "{{ __('Program SSW Kiseki membekali saya dengan persiapan wawancara yang matang. Dokumen diurus dengan cepat dan transparan.') }}"
+                </p>
+                <div style="color: var(--accent-color); margin-top: 1rem; font-size: 0.9rem;">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
     @if(count($achievements) > 0)
         <section style="background-color: var(--light-bg);">
             <h2 class="section-title" data-aos="fade-up">{{ __('Pencapaian Kami') }}</h2>
@@ -91,5 +145,49 @@
             </div>
         </section>
     @endif
+
+    <!-- FAQ Section -->
+    <section style="background-color: var(--light-bg); padding: 4rem 5%;">
+        <h2 class="section-title" data-aos="fade-up">{{ __('Pertanyaan yang Sering Diajukan (FAQ)') }}</h2>
+        <div style="max-width: 800px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+            
+            <!-- FAQ 1 -->
+            <div style="background: var(--white); border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden;">
+                <details style="padding: 1.5rem; cursor: pointer;">
+                    <summary style="font-weight: 600; color: var(--dark-bg); font-size: 1.1rem; list-style-position: outside; outline: none;">
+                        {{ __('Berapa lama masa pelatihan sebelum berangkat ke Jepang?') }}
+                    </summary>
+                    <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                        {{ __('Lama pelatihan bervariasi antara 4 hingga 6 bulan tergantung pada program yang diambil dan kemampuan dasar bahasa Jepang siswa. Kami fokus pada kelulusan ujian JLPT/JFT dan kesiapan interview.') }}
+                    </p>
+                </details>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div style="background: var(--white); border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden;">
+                <details style="padding: 1.5rem; cursor: pointer;">
+                    <summary style="font-weight: 600; color: var(--dark-bg); font-size: 1.1rem; list-style-position: outside; outline: none;">
+                        {{ __('Apakah disediakan asrama selama pelatihan?') }}
+                    </summary>
+                    <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                        {{ __('Ya, kami menyediakan fasilitas asrama yang nyaman dan lengkap bagi siswa yang berasal dari luar kota untuk mendukung proses belajar yang lebih intensif.') }}
+                    </p>
+                </details>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div style="background: var(--white); border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden;">
+                <details style="padding: 1.5rem; cursor: pointer;">
+                    <summary style="font-weight: 600; color: var(--dark-bg); font-size: 1.1rem; list-style-position: outside; outline: none;">
+                        {{ __('Apakah ada batas usia untuk mendaftar?') }}
+                    </summary>
+                    <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                        {{ __('Untuk program Pemagangan, usia yang disarankan adalah 18 - 25 tahun. Sementara untuk program Tokutei Ginou (SSW), batas usianya bisa lebih fleksibel hingga 35 tahun, tergantung permintaan perusahaan di Jepang.') }}
+                    </p>
+                </details>
+            </div>
+
+        </div>
+    </section>
 
 @endsection
