@@ -74,7 +74,7 @@
                 <!-- Google Maps -->
                 <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0250917631317!2d107.61664157499623!3d-6.887600893111956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6fbc622b7d5%3A0xbcc0e1fc83769c02!2sJl.%20Sadang%20Luhur%20VI%2C%20Sekeloa%2C%20Kecamatan%20Coblong%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040134!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                        src="https://maps.google.com/maps?q=-6.8876905,107.6236881&t=&z=17&ie=UTF8&iwloc=&output=embed"
                         width="100%" height="300" style="border:0; display: block;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
