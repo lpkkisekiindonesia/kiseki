@@ -14,7 +14,6 @@ use App\Http\Controllers\Auth\VerificationController;
 // Public Routes
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
-Route::get('/guru', [PageController::class, 'teachers'])->name('teachers');
 Route::get('/programs', [PageController::class, 'programs'])->name('programs');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::get('/achievements', [PageController::class, 'achievements'])->name('achievements');
