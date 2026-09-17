@@ -34,6 +34,8 @@
                     class="{{ request()->routeIs('home') ? 'active' : '' }}">{{ __('Home') }}</a></li>
             <li><a href="{{ route('about') }}"
                     class="{{ request()->routeIs('about') ? 'active' : '' }}">{{ __('Tentang Kami') }}</a></li>
+            <li><a href="{{ route('teachers') }}"
+                    class="{{ request()->routeIs('teachers') ? 'active' : '' }}">{{ __('Pengajar') }}</a></li>
             <li><a href="{{ route('programs') }}"
                     class="{{ request()->routeIs('programs') ? 'active' : '' }}">{{ __('Program') }}</a></li>
             <li><a href="{{ route('articles.index') }}"

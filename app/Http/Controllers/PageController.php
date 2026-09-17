@@ -21,6 +21,11 @@ class PageController extends Controller
         return view('frontend.about');
     }
 
+    public function teachers()
+    {
+        return view('frontend.teachers');
+    }
+
     public function programs()
     {
         return view('frontend.programs');
