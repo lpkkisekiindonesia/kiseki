@@ -74,7 +74,7 @@
                 <!-- Google Maps -->
                 <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);">
                     <iframe
-                        src="https://maps.google.com/maps?q=-6.8876905,107.6236881&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.5640840216005!2d107.62358003295294!3d-6.8875675611369696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e70060299d6f%3A0xe05694d18648ca79!2sKJA%20Via%20Oktaviani%20Kusnadi!5e0!3m2!1sen!2sid!4v1789662985342!5m2!1sen!2sid"
                         width="100%" height="300" style="border:0; display: block;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
