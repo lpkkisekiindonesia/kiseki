@@ -143,8 +143,7 @@ a:hover {
 /* Dropdown */
 .dropdown {
     position: relative;
-    display: flex;
-    align-items: center;
+    display: inline-block;
 }
 
 /* Invisible bridge so hover doesn't break */
