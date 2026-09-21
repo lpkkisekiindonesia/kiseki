@@ -854,27 +854,9 @@ footer {
 .org-chart {
     display: flex;
     justify-content: center;
-    overflow-x: auto;
+    overflow-x: hidden; /* Sembunyikan scrollbar sepenuhnya */
     padding-top: 1rem;
     padding-bottom: 2rem;
-    /* Memberikan padding bawah agar scrollbar tidak menempel */
-    padding-bottom: 30px; 
-}
-
-/* Custom Scrollbar untuk Bagan Organisasi */
-.org-chart::-webkit-scrollbar {
-    height: 8px; /* Scrollbar horizontal tipis */
-}
-.org-chart::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 10px;
-}
-.org-chart::-webkit-scrollbar-thumb {
-    background: #f9a623; /* Warna aksen Kiseki */
-    border-radius: 10px;
-}
-.org-chart::-webkit-scrollbar-thumb:hover {
-    background: #e09117; 
 }
 
 .org-chart ul {
@@ -895,7 +877,7 @@ footer {
     text-align: center;
     list-style-type: none;
     position: relative;
-    padding: 20px 10px 0 10px; /* Kembalikan padding agak lebar */
+    padding: 20px 2px 0 2px; /* Perkecil padding agar muat di layar */
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -975,7 +957,7 @@ footer {
     text-align: center;
     z-index: 1;
     width: auto;
-    min-width: 150px; /* Kembalikan ke 150px */
+    min-width: 120px; /* Perkecil sedikit agar fit ke layar tanpa scrollbar */
     cursor: pointer; /* Indikator bisa diklik */
 }
 
@@ -997,9 +979,9 @@ footer {
     background: linear-gradient(135deg, #f9a623, #e09117);
     color: #fff;
     font-weight: 700;
-    padding: 6px 20px; /* Kembalikan ukuran */
+    padding: 6px 15px; 
     border-radius: 20px;
-    font-size: 0.85rem; /* Kembalikan ukuran */
+    font-size: 0.8rem;
     display: inline-block;
     position: relative;
     z-index: 2;
@@ -1007,7 +989,7 @@ footer {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-transform: uppercase;
     transition: var(--transition);
-    max-width: 200px;
+    max-width: 160px;
     line-height: 1.3;
 }
 
