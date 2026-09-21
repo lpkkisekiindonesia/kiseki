@@ -14,11 +14,11 @@
             {{ __('LPK Kiseki Indonesia didukung oleh instruktur profesional, berpengalaman, dan tersertifikasi yang siap membimbing Anda mencapai tingkat kelulusan bahasa Jepang terbaik serta persiapan mental kerja yang matang.') }}
         </p>
 
-        <div class="org-chart" data-aos="zoom-in" data-aos-delay="200">
+        <div class="org-chart">
             <ul>
                 <!-- Tingkat 1: Pembina -->
                 <li>
-                    <div class="org-card">
+                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="100">
                         <div class="role-badge">PEMBINA</div>
                         <div class="img-container">
                             <img src="https://ui-avatars.com/api/?name=Diky+Mudhakir&background=f9a623&color=fff&size=100" alt="Prof. Dr. Diky Mudhakir">
@@ -29,7 +29,7 @@
                     <ul>
                         <!-- Tingkat 2: Direktur Utama -->
                         <li>
-                            <div class="org-card">
+                            <div class="org-card" data-aos="zoom-in-up" data-aos-delay="200">
                                 <div class="role-badge">DIREKTUR UTAMA</div>
                                 <div class="img-container">
                                     <img src="{{ asset('images/Sachou.jpeg') }}" alt="Ellnovianty Nine, M.Hum">
@@ -40,7 +40,7 @@
                             <ul>
                                 <!-- Tingkat 3A: Instruktur -->
                                 <li>
-                                    <div class="org-card">
+                                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="300">
                                         <div class="role-badge" style="font-size:0.75rem;">KEPALA INSTRUKTUR BAHASA JEPANG</div>
                                         <div class="img-container">
                                             <img src="{{ asset('images/Tasha.jpeg') }}" alt="Tashaismia">
@@ -50,12 +50,12 @@
                                     
                                     <ul>
                                         <li>
-                                            <div class="org-card" style="margin-bottom: 20px;">
+                                            <div class="org-card" style="margin-bottom: 20px;" data-aos="fade-in" data-aos-delay="400">
                                                 <div class="role-badge">TIM PENDIDIKAN BAHASA JEPANG</div>
                                             </div>
                                             <ul>
                                                 <li>
-                                                    <div class="org-card">
+                                                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="500">
                                                         <div class="img-container">
                                                             <img src="{{ asset('images/Faiz.jpeg') }}" alt="Tubagus Faiz">
                                                         </div>
@@ -63,7 +63,7 @@
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="org-card">
+                                                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="600">
                                                         <div class="img-container">
                                                             <img src="{{ asset('images/Kesha.jpeg') }}" alt="Keysha">
                                                         </div>
@@ -71,7 +71,7 @@
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="org-card">
+                                                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="700">
                                                         <div class="img-container">
                                                             <img src="{{ asset('images/Ajeng.jpg') }}" alt="Ajeng">
                                                         </div>
@@ -85,7 +85,7 @@
 
                                 <!-- Tingkat 3B: Administrasi -->
                                 <li>
-                                    <div class="org-card">
+                                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="400">
                                         <div class="role-badge" style="font-size:0.75rem;">KEPALA ADMINISTRASI-KEUANGAN</div>
                                         <div class="img-container" style="background-color: #f0f0f0;">
                                             <!-- Dikosongkan sesuai permintaan -->
@@ -95,12 +95,12 @@
                                     
                                     <ul>
                                         <li>
-                                            <div class="org-card" style="margin-bottom: 20px;">
+                                            <div class="org-card" style="margin-bottom: 20px;" data-aos="fade-in" data-aos-delay="500">
                                                 <div class="role-badge">TIM ADMIN-HUMAS</div>
                                             </div>
                                             <ul>
                                                 <li>
-                                                    <div class="org-card">
+                                                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="600">
                                                         <div class="img-container">
                                                             <img src="{{ asset('images/Esa.jpeg') }}" alt="Eep">
                                                         </div>
@@ -108,7 +108,7 @@
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="org-card">
+                                                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="700">
                                                         <div class="img-container">
                                                             <img src="{{ asset('images/Mulki.jpeg') }}" alt="Mulki">
                                                         </div>
@@ -122,7 +122,7 @@
 
                                 <!-- Tingkat 3C: Perekrutan -->
                                 <li>
-                                    <div class="org-card">
+                                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="500">
                                         <div class="role-badge" style="font-size:0.75rem;">KABID. PEREKRUTAN DALAM NEGERI</div>
                                         <div class="img-container">
                                             <img src="{{ asset('images/Awaludin.jpeg') }}" alt="Awaludin">

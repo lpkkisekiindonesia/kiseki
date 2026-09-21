@@ -893,12 +893,15 @@ footer {
     width: 50%;
     height: 20px;
     z-index: 0;
+    animation: drawLineHorizontal 1.5s ease-out forwards;
+    transform-origin: right;
 }
 
 .org-chart li::after {
     right: auto;
     left: 50%;
     border-left: 2px solid var(--primary-color);
+    transform-origin: left;
 }
 
 /* Hapus garis untuk node yang sendirian */
@@ -933,6 +936,16 @@ footer {
     width: 0;
     height: 20px;
     transform: translateX(-50%);
+    animation: drawLineVertical 1s ease-out forwards;
+}
+
+@keyframes drawLineHorizontal {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+@keyframes drawLineVertical {
+    from { height: 0; }
+    to { height: 20px; }
 }
 
 .org-card {
@@ -948,13 +961,22 @@ footer {
 }
 
 .org-card:hover {
-    transform: none;
-    box-shadow: none;
+    transform: translateY(-5px) scale(1.03);
+    z-index: 10;
+}
+
+.org-card:hover .img-container {
+    box-shadow: 0 0 15px rgba(249, 166, 35, 0.5);
+    border-color: var(--accent-color);
+}
+
+.org-card:hover .role-badge {
+    box-shadow: 0 0 15px rgba(249, 166, 35, 0.5);
 }
 
 .role-badge {
-    background-color: #f9a623;
-    color: #000;
+    background: linear-gradient(135deg, #f9a623, #e09117);
+    color: #fff;
     font-weight: 700;
     padding: 6px 20px;
     border-radius: 20px;
@@ -965,6 +987,7 @@ footer {
     margin-bottom: -15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-transform: uppercase;
+    transition: var(--transition);
 }
 
 .img-container {
@@ -978,6 +1001,7 @@ footer {
     position: relative;
     z-index: 1;
     background-color: #eee;
+    transition: var(--transition);
 }
 
 .img-container img {
