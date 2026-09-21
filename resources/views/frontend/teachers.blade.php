@@ -16,38 +16,121 @@
 
         <div class="org-chart" data-aos="zoom-in" data-aos-delay="200">
             <ul>
-                <!-- Tingkat 1: Instruktur Kepala -->
+                <!-- Tingkat 1: Pembina -->
                 <li>
                     <div class="org-card">
-                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?q=80&w=2070&auto=format&fit=crop" alt="Sensei A">
-                        <div class="card-body">
-                            <h3>{{ __('Takeshi Yamada Sensei') }}</h3>
-                            <p class="title">{{ __('Instruktur Kepala (Native)') }}</p>
-                            <p class="desc">{{ __('Berpengalaman lebih dari 10 tahun mengajar bahasa Jepang untuk orang asing. Beliau memfokuskan pengajarannya pada komunikasi praktis (Kaiwa) dan pemahaman budaya kerja (Hourensou).') }}</p>
+                        <div class="role-badge">PEMBINA</div>
+                        <div class="img-container">
+                            <img src="https://ui-avatars.com/api/?name=Diky+Mudhakir&background=f9a623&color=fff&size=100" alt="Prof. Dr. Diky Mudhakir">
                         </div>
+                        <div class="name-badge">PROF. DR. DIKY MUDHAKIR</div>
                     </div>
                     
-                    <!-- Tingkat 2: Instruktur Cabang -->
                     <ul>
+                        <!-- Tingkat 2: Direktur Utama -->
                         <li>
                             <div class="org-card">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop" alt="Sensei B">
-                                <div class="card-body">
-                                    <h3>{{ __('Sari Widyastuti Sensei') }}</h3>
-                                    <p class="title">{{ __('Instruktur JLPT N3/N4') }}</p>
-                                    <p class="desc">{{ __('Lulusan Sastra Jepang dari universitas terkemuka yang memiliki rekor meluluskan ratusan siswa dalam ujian JLPT setiap tahunnya berkat metode pengajaran tata bahasa yang mudah dipahami.') }}</p>
+                                <div class="role-badge">DIREKTUR UTAMA</div>
+                                <div class="img-container">
+                                    <img src="{{ asset('images/Sachou.jpeg') }}" alt="Ellnovianty Nine, M.Hum">
                                 </div>
+                                <div class="name-badge">ELLNOVIANTY NINE, M.HUM</div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="org-card">
-                                <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=1887&auto=format&fit=crop" alt="Sensei C">
-                                <div class="card-body">
-                                    <h3>{{ __('Budi Santoso') }}</h3>
-                                    <p class="title">{{ __('Instruktur FMD (Fisik, Mental, Disiplin)') }}</p>
-                                    <p class="desc">{{ __('Bertanggung jawab atas pelatihan fisik dan kedisiplinan kerja ala Jepang, memastikan setiap kandidat memiliki mentalitas pantang menyerah sebelum diberangkatkan ke tempat kerja.') }}</p>
-                                </div>
-                            </div>
+                            
+                            <ul>
+                                <!-- Tingkat 3A: Instruktur -->
+                                <li>
+                                    <div class="org-card">
+                                        <div class="role-badge" style="font-size:0.75rem;">KEPALA INSTRUKTUR BAHASA JEPANG</div>
+                                        <div class="img-container">
+                                            <img src="{{ asset('images/Tasha.jpeg') }}" alt="Tashaismia">
+                                        </div>
+                                        <div class="name-badge" style="font-size:0.65rem;">TASHAISMIA PUSPITAWATI SUMITRA, S.S</div>
+                                    </div>
+                                    
+                                    <ul>
+                                        <li>
+                                            <div class="org-card" style="margin-bottom: 20px;">
+                                                <div class="role-badge">TIM PENDIDIKAN BAHASA JEPANG</div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <div class="org-card">
+                                                        <div class="img-container">
+                                                            <img src="{{ asset('images/Faiz.jpeg') }}" alt="Tubagus Faiz">
+                                                        </div>
+                                                        <div class="name-badge">TUBAGUS FAIZ AFIF</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="org-card">
+                                                        <div class="img-container">
+                                                            <img src="{{ asset('images/Kesha.jpeg') }}" alt="Keysha">
+                                                        </div>
+                                                        <div class="name-badge">KEYSHA AMANDA RAMDHANI</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="org-card">
+                                                        <div class="img-container">
+                                                            <img src="{{ asset('images/Ajeng.jpg') }}" alt="Ajeng">
+                                                        </div>
+                                                        <div class="name-badge">AJENG BELLA PRATIWI</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!-- Tingkat 3B: Administrasi -->
+                                <li>
+                                    <div class="org-card">
+                                        <div class="role-badge" style="font-size:0.75rem;">KEPALA ADMINISTRASI-KEUANGAN</div>
+                                        <div class="img-container" style="background-color: #f0f0f0;">
+                                            <!-- Dikosongkan sesuai permintaan -->
+                                        </div>
+                                        <div class="name-badge">ELZA PUTRI KHOIRUNNISA, S.M</div>
+                                    </div>
+                                    
+                                    <ul>
+                                        <li>
+                                            <div class="org-card" style="margin-bottom: 20px;">
+                                                <div class="role-badge">TIM ADMIN-HUMAS</div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <div class="org-card">
+                                                        <div class="img-container">
+                                                            <img src="{{ asset('images/Esa.jpeg') }}" alt="Eep">
+                                                        </div>
+                                                        <div class="name-badge">EEP SAEPULOH</div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="org-card">
+                                                        <div class="img-container">
+                                                            <img src="{{ asset('images/Mulki.jpeg') }}" alt="Mulki">
+                                                        </div>
+                                                        <div class="name-badge">MUHAMAD MULKI MUALIM</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!-- Tingkat 3C: Perekrutan -->
+                                <li>
+                                    <div class="org-card">
+                                        <div class="role-badge" style="font-size:0.75rem;">KABID. PEREKRUTAN DALAM NEGERI</div>
+                                        <div class="img-container">
+                                            <img src="{{ asset('images/Awaludin.jpeg') }}" alt="Awaludin">
+                                        </div>
+                                        <div class="name-badge">AWALUDIN</div>
+                                    </div>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>
