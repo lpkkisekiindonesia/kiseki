@@ -854,13 +854,15 @@ footer {
 .org-chart {
     display: flex;
     justify-content: center;
-    overflow-x: hidden; /* Sembunyikan scrollbar sepenuhnya */
+    overflow: hidden; /* Pastikan tidak ada scrollbar sama sekali */
     padding-top: 1rem;
     padding-bottom: 2rem;
     width: 100%;
 }
 
 .org-chart ul {
+    transform-origin: top center; /* Untuk Javascript scaling */
+}
     padding-top: 20px;
     position: relative;
     transition: all 0.5s;
@@ -1113,20 +1115,6 @@ footer {
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.6;
-}
-
-/* Scaling Dinamis untuk layar yang sempit agar tidak perlu scrollbar horizontal */
-@media (max-width: 1300px) {
-    .org-chart ul { zoom: 0.9; }
-}
-@media (max-width: 1100px) {
-    .org-chart ul { zoom: 0.8; }
-}
-@media (max-width: 950px) {
-    .org-chart ul { zoom: 0.7; }
-}
-@media (max-width: 850px) {
-    .org-chart ul { zoom: 0.6; }
 }
 
 /* Tingkatkan breakpoint mobile agar layar laptop kecil langsung menggunakan vertikal jika masih tidak muat */

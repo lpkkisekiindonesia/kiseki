@@ -179,5 +179,42 @@
         }
         document.getElementById('staffModal').classList.remove('active');
     }
+
+    // Fungsi untuk menskalakan bagan agar pas di layar secara otomatis tanpa scrollbar
+    function scaleOrgChart() {
+        const container = document.querySelector('.org-chart');
+        const chart = document.querySelector('.org-chart > ul');
+        
+        if (!container || !chart) return;
+
+        // Reset terlebih dahulu untuk mengukur ulang dengan benar
+        chart.style.transform = 'none';
+        container.style.height = 'auto';
+        
+        // Jangan distretch/scale jika dalam mode mobile (bersusun ke bawah)
+        if (window.innerWidth <= 1024) return;
+        
+        const containerWidth = container.clientWidth;
+        const chartWidth = chart.scrollWidth; 
+        
+        // Jika lebar bagan melebihi lebar layar, perkecil dengan transform
+        if (chartWidth > containerWidth && containerWidth > 0) {
+            // Berikan margin ekstra 10px agar tidak terlalu mepet tepi
+            const scale = (containerWidth - 20) / chartWidth;
+            chart.style.transform = `scale(${scale})`;
+            
+            // Sesuaikan tinggi container agar tidak ada ruang kosong tersisa di bawah
+            const chartHeight = chart.scrollHeight;
+            container.style.height = `${(chartHeight * scale) + 50}px`; 
+        }
+    }
+
+    // Jalankan saat pertama kali dimuat, saat AOS selesai animasi, dan saat layar diresize
+    window.addEventListener('load', scaleOrgChart);
+    window.addEventListener('resize', scaleOrgChart);
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(scaleOrgChart, 150); // Eksekusi setelah DOM stabil
+        setTimeout(scaleOrgChart, 1000); // Eksekusi memastikan AOS selesai
+    });
 </script>
 @endsection
