@@ -1117,4 +1117,28 @@ footer {
     line-height: 1.6;
 }
 
-/* Hilangkan breakpoint mobile karena bagan akan diskala (zoom/scale) secara otomatis oleh Javascript ke semua ukuran layar tanpa merusak susunan hirarki */
+/* Gunakan layout vertikal (mobile) hanya pada layar tablet kecil/HP (768px) agar di Android/iOS tetap besar dan jelas */
+@media (max-width: 768px) {
+    .org-chart ul {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        min-width: 100%;
+        transform: none !important;
+    }
+    
+    .org-chart li::before, .org-chart li::after, .org-chart ul ul::before {
+        display: none !important; /* Hapus garis di versi mobile */
+    }
+    
+    .org-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .org-chart li {
+        padding: 20px 0;
+        float: none;
+    }
+}

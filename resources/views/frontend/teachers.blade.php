@@ -191,7 +191,8 @@
         chart.style.transform = 'none';
         container.style.height = 'auto';
         
-        // Scale akan diaplikasikan ke semua ukuran layar agar struktur bagan (hirarki) tetap utuh
+        // Di Android/iOS (layar kecil < 768px), bagan disusun vertikal murni lewat CSS. Jangan di-scale oleh JS.
+        if (window.innerWidth <= 768) return;
         
         const containerWidth = container.clientWidth;
         const chartWidth = chart.scrollWidth; 
