@@ -199,6 +199,18 @@
                 navLinks.classList.toggle('active');
             });
 
+            // Dropdown Toggle for Mobile/Touch
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 1024) {
+                        // Prevent closing if clicking inside dropdown content links
+                        if(e.target.closest('.dropdown-content')) return;
+                        this.classList.toggle('show-dropdown');
+                    }
+                });
+            });
+
             window.addEventListener('scroll', function () {
                 if (window.scrollY > 50) {
                     navbar.classList.add('scrolled');

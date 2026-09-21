@@ -647,7 +647,8 @@ footer {
     visibility: visible;
 }
 
-.navbar.scrolled .nav-links .dropdown:hover .dropdown-content {
+.navbar.scrolled .nav-links .dropdown:hover .dropdown-content,
+.navbar.scrolled .nav-links .dropdown.show-dropdown .dropdown-content {
     display: block;
 }
 
@@ -778,7 +779,8 @@ footer {
         visibility: visible;
     }
 
-    .nav-links .dropdown:hover .dropdown-content {
+    .nav-links .dropdown:hover .dropdown-content,
+    .nav-links .dropdown.show-dropdown .dropdown-content {
         display: block;
     }
 
