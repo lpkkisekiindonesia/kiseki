@@ -12,7 +12,7 @@
     <link rel="icon" href="{{ asset('images/logo.jpeg') }}" type="image/jpeg">
     <link rel="shortcut icon" href="{{ asset('images/logo.jpeg') }}" type="image/jpeg">
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ time() }}">
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- FontAwesome for icons -->
