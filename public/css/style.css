@@ -894,7 +894,7 @@ footer {
     position: absolute;
     top: 0;
     right: 50%;
-    border-top: 2px solid var(--primary-color);
+    border-top: 2px solid #c1272d; /* Warna garis merah sesuai referensi */
     width: 50%;
     height: 20px;
     z-index: 0;
@@ -905,7 +905,7 @@ footer {
 .org-chart li::after {
     right: auto;
     left: 50%;
-    border-left: 2px solid var(--primary-color);
+    border-left: 2px solid #c1272d; /* Warna garis merah sesuai referensi */
     transform-origin: left;
 }
 
@@ -922,13 +922,13 @@ footer {
     border: 0 none;
 }
 
-/* Tambahkan lengkungan pada ujung garis */
+/* Garis vertikal (sudut siku-siku seperti referensi, tanpa radius) */
 .org-chart li:last-child::before {
-    border-right: 2px solid var(--primary-color);
-    border-radius: 0 5px 0 0;
+    border-right: 2px solid #c1272d;
+    border-radius: 0;
 }
 .org-chart li:first-child::after {
-    border-radius: 5px 0 0 0;
+    border-radius: 0;
 }
 
 /* Garis vertikal ke bawah dari parent */
@@ -937,7 +937,7 @@ footer {
     position: absolute;
     top: 0;
     left: 50%;
-    border-left: 2px solid var(--primary-color);
+    border-left: 2px solid #c1272d; /* Warna merah */
     width: 0;
     height: 20px;
     transform: translateX(-50%);
@@ -1002,7 +1002,7 @@ footer {
     width: 100px; /* Kembalikan ukuran besar */
     height: 100px;
     border-radius: 50%;
-    border: 4px solid #fff;
+    border: 4px solid #f9a623; /* Border oranye agar menyerupai referensi */
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     overflow: hidden;
     margin: 0 auto;

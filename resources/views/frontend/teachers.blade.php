@@ -7,12 +7,19 @@
     <h1>{{ __('Profil Instruktur Kami') }}</h1>
 </div>
 
-<section style="background-color: var(--light-bg); padding: 5rem 0;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; text-align: center;">
-        <h2 style="color: var(--primary-color); margin-bottom: 1rem;" data-aos="fade-up">{{ __('Belajar Langsung dari Ahlinya') }}</h2>
-        <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 4rem auto; line-height: 1.8;" data-aos="fade-up" data-aos-delay="100">
-            {{ __('LPK Kiseki Indonesia didukung oleh instruktur profesional, berpengalaman, dan tersertifikasi yang siap membimbing Anda mencapai tingkat kelulusan bahasa Jepang terbaik serta persiapan mental kerja yang matang.') }}
-        </p>
+<section style="background-image: linear-gradient(rgba(249, 249, 249, 0.85), rgba(249, 249, 249, 0.85)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-attachment: fixed; padding: 5rem 0; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative;">
+        
+        <!-- Header Bagan seperti referensi -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 3rem;">
+            <div style="text-align: left;" data-aos="fade-right">
+                <h2 style="font-size: 2.5rem; font-weight: 800; color: #000; line-height: 1.2; margin: 0;">STRUKTUR</h2>
+                <h2 style="font-size: 2.5rem; font-weight: 800; color: #000; line-height: 1.2; margin: 0;">ORGANISASI</h2>
+            </div>
+            <div data-aos="fade-left">
+                <img src="{{ asset('images/logo.jpeg') }}" alt="Logo Kiseki" style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+            </div>
+        </div>
 
         <div class="org-chart">
             <ul>
@@ -187,25 +194,42 @@
         
         if (!container || !chart) return;
 
-        // Reset terlebih dahulu untuk mengukur ulang dengan benar
+        // Reset terlebih dahulu
         chart.style.transform = 'none';
-        container.style.height = 'auto';
-        
-        // Di Android/iOS (layar kecil < 768px), bagan disusun vertikal murni lewat CSS. Jangan di-scale oleh JS.
-        if (window.innerWidth <= 768) return;
+        chart.style.transformOrigin = 'top left';
         
         const containerWidth = container.clientWidth;
         const chartWidth = chart.scrollWidth; 
         
-        // Jika lebar bagan melebihi lebar layar, perkecil dengan transform
+        // Di mobile (<768px), biarkan horizontal dan scrollable jika user ingin swipe
+        if (window.innerWidth <= 768) {
+            container.style.overflowX = 'auto'; // Izinkan swipe
+            chart.style.marginLeft = 'auto';
+            chart.style.marginRight = 'auto';
+            return;
+        }
+        
+        // Jika lebar bagan melebihi lebar layar (di PC/Tablet), perkecil agar fit 100% tanpa scroll
         if (chartWidth > containerWidth && containerWidth > 0) {
-            // Berikan margin ekstra 10px agar tidak terlalu mepet tepi
-            const scale = (containerWidth - 20) / chartWidth;
+            const scale = containerWidth / chartWidth;
             chart.style.transform = `scale(${scale})`;
+            
+            // Pusatkan bagan yang sudah di-scale
+            const scaledWidth = chartWidth * scale;
+            const marginLeft = (containerWidth - scaledWidth) / 2;
+            chart.style.marginLeft = `${marginLeft}px`;
+            
+            // KUNCI container agar sama sekali tidak bisa di-scroll/geser di PC
+            container.style.overflowX = 'hidden'; 
             
             // Sesuaikan tinggi container agar tidak ada ruang kosong tersisa di bawah
             const chartHeight = chart.scrollHeight;
-            container.style.height = `${(chartHeight * scale) + 50}px`; 
+            container.style.height = `${(chartHeight * scale) + 20}px`; 
+        } else {
+            chart.style.marginLeft = 'auto';
+            chart.style.marginRight = 'auto';
+            container.style.height = 'auto';
+            container.style.overflowX = 'hidden';
         }
     }
 
