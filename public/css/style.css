@@ -845,7 +845,163 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 .floating-wa:hover {
-    background-color: #128c7e;
+    background-color: #128C7E;
     transform: scale(1.1);
     color: #FFF;
+}
+
+/* Organization Chart (Teachers) */
+.org-chart {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.org-chart ul {
+    padding-top: 20px;
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.org-chart li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 20px 0 20px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+/* Garis horizontal dari elemen anak ke saudaranya */
+.org-chart li::before, .org-chart li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid var(--primary-color);
+    width: 50%;
+    height: 20px;
+    z-index: 0;
+}
+
+.org-chart li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid var(--primary-color);
+}
+
+/* Hapus garis untuk node yang sendirian */
+.org-chart li:only-child::after, .org-chart li:only-child::before {
+    display: none;
+}
+.org-chart li:only-child {
+    padding-top: 0;
+}
+
+/* Hapus garis lebihan dari ujung kiri dan kanan */
+.org-chart li:first-child::before, .org-chart li:last-child::after {
+    border: 0 none;
+}
+
+/* Tambahkan lengkungan pada ujung garis */
+.org-chart li:last-child::before {
+    border-right: 2px solid var(--primary-color);
+    border-radius: 0 5px 0 0;
+}
+.org-chart li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+/* Garis vertikal ke bawah dari parent */
+.org-chart ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid var(--primary-color);
+    width: 0;
+    height: 20px;
+    transform: translateX(-50%);
+}
+
+.org-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: inline-block;
+    width: 280px;
+    position: relative;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    z-index: 1;
+}
+
+.org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.org-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.org-card .card-body {
+    padding: 1.5rem;
+}
+
+.org-card h3 {
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.org-card p.title {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.org-card p.desc {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .org-chart ul {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+    
+    .org-chart li::before, .org-chart li::after, .org-chart ul ul::before {
+        display: none !important; /* Hapus garis di versi mobile */
+    }
+    
+    .org-chart li {
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    .org-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
 }
