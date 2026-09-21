@@ -120,7 +120,7 @@ a:hover {
 }
 
 .nav-links .dropdown-content {
-    display: none;
+    visibility: hidden;
     position: absolute;
     background-color: var(--white);
     min-width: 200px;
@@ -133,11 +133,11 @@ a:hover {
     padding: 0.5rem 0;
     border: 1px solid rgba(0,0,0,0.05);
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
 .nav-links .dropdown:hover .dropdown-content {
-    display: block;
+    visibility: visible;
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
@@ -621,6 +621,7 @@ footer {
     padding: 0;
     display: none;
     opacity: 1;
+    visibility: visible;
 }
 
 .navbar.scrolled .nav-links .dropdown:hover .dropdown-content {
@@ -745,6 +746,7 @@ footer {
         padding: 0;
         display: none;
         opacity: 1;
+        visibility: visible;
     }
 
     .nav-links .dropdown:hover .dropdown-content {
