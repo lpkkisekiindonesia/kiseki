@@ -857,12 +857,24 @@ footer {
     overflow-x: auto;
     padding-top: 1rem;
     padding-bottom: 2rem;
-    /* Sembunyikan scrollbar tapi tetap bisa di-scroll jika terpaksa */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    /* Memberikan padding bawah agar scrollbar tidak menempel */
+    padding-bottom: 30px; 
 }
+
+/* Custom Scrollbar untuk Bagan Organisasi */
 .org-chart::-webkit-scrollbar {
-    display: none; /* Chrome, Safari and Opera */
+    height: 8px; /* Scrollbar horizontal tipis */
+}
+.org-chart::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+.org-chart::-webkit-scrollbar-thumb {
+    background: #f9a623; /* Warna aksen Kiseki */
+    border-radius: 10px;
+}
+.org-chart::-webkit-scrollbar-thumb:hover {
+    background: #e09117; 
 }
 
 .org-chart ul {
@@ -883,7 +895,7 @@ footer {
     text-align: center;
     list-style-type: none;
     position: relative;
-    padding: 20px 5px 0 5px; /* Kurangi padding kiri/kanan agar lebih rapat */
+    padding: 20px 10px 0 10px; /* Kembalikan padding agak lebar */
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -963,7 +975,8 @@ footer {
     text-align: center;
     z-index: 1;
     width: auto;
-    min-width: 120px; /* Kurangi ukuran minimal */
+    min-width: 150px; /* Kembalikan ke 150px */
+    cursor: pointer; /* Indikator bisa diklik */
 }
 
 .org-card:hover {
@@ -984,9 +997,9 @@ footer {
     background: linear-gradient(135deg, #f9a623, #e09117);
     color: #fff;
     font-weight: 700;
-    padding: 4px 12px; /* Kurangi padding */
+    padding: 6px 20px; /* Kembalikan ukuran */
     border-radius: 20px;
-    font-size: 0.7rem; /* Perkecil font */
+    font-size: 0.85rem; /* Kembalikan ukuran */
     display: inline-block;
     position: relative;
     z-index: 2;
@@ -994,15 +1007,15 @@ footer {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-transform: uppercase;
     transition: var(--transition);
-    max-width: 150px; /* Agar teks panjang bisa membungkus ke baris baru jika perlu */
-    line-height: 1.2;
+    max-width: 200px;
+    line-height: 1.3;
 }
 
 .img-container {
-    width: 80px; /* Kurangi ukuran gambar */
-    height: 80px;
+    width: 100px; /* Kembalikan ke 100px */
+    height: 100px; /* Kembalikan ke 100px */
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 4px solid #fff; /* Kembalikan ke 4px */
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     overflow: hidden;
     margin: 0 auto;
@@ -1022,9 +1035,9 @@ footer {
     background-color: #2a3d3c;
     color: #fff;
     font-weight: 600;
-    padding: 4px 12px;
+    padding: 6px 20px; /* Kembalikan ukuran */
     border-radius: 20px;
-    font-size: 0.65rem; /* Perkecil font */
+    font-size: 0.75rem; /* Kembalikan ukuran */
     display: inline-block;
     position: relative;
     z-index: 2;
@@ -1032,8 +1045,91 @@ footer {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    max-width: 130px; /* Agar teks panjang bisa bungkus */
-    line-height: 1.2;
+    max-width: 180px;
+    line-height: 1.3;
+}
+
+/* Modal Staf CSS */
+.staff-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.staff-modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.staff-modal {
+    background: #fff;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(30px);
+    transition: transform 0.3s ease;
+}
+
+.staff-modal-overlay.active .staff-modal {
+    transform: translateY(0);
+}
+
+.staff-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    line-height: 1;
+}
+
+.staff-modal-close:hover {
+    color: var(--primary-color);
+}
+
+.staff-modal img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    margin-bottom: 1rem;
+    background-color: #eee;
+}
+
+.staff-modal h3 {
+    margin-bottom: 0.2rem;
+    color: var(--dark-bg);
+}
+
+.staff-modal .staff-role {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.staff-modal .staff-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 /* Tingkatkan breakpoint mobile agar layar laptop kecil langsung menggunakan vertikal jika masih tidak muat */
