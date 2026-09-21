@@ -191,8 +191,7 @@
         chart.style.transform = 'none';
         container.style.height = 'auto';
         
-        // Jangan distretch/scale jika dalam mode mobile (bersusun ke bawah)
-        if (window.innerWidth <= 768) return;
+        // Scale akan diaplikasikan ke semua ukuran layar agar struktur bagan (hirarki) tetap utuh
         
         const containerWidth = container.clientWidth;
         const chartWidth = chart.scrollWidth; 
