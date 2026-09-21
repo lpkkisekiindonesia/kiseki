@@ -192,7 +192,7 @@
         container.style.height = 'auto';
         
         // Jangan distretch/scale jika dalam mode mobile (bersusun ke bawah)
-        if (window.innerWidth <= 1024) return;
+        if (window.innerWidth <= 768) return;
         
         const containerWidth = container.clientWidth;
         const chartWidth = chart.scrollWidth; 

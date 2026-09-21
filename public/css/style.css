@@ -1117,8 +1117,8 @@ footer {
     line-height: 1.6;
 }
 
-/* Tingkatkan breakpoint mobile agar layar laptop kecil langsung menggunakan vertikal jika masih tidak muat */
-@media (max-width: 1024px) {
+/* Gunakan layout vertikal (mobile) hanya pada layar tablet kecil/HP (768px) */
+@media (max-width: 768px) {
     .org-chart ul {
         flex-direction: column;
         align-items: center;
