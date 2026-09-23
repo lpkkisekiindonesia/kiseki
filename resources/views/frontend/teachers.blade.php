@@ -11,13 +11,13 @@
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; position: relative;">
         
         <!-- Header Bagan seperti referensi -->
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 3rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;">
             <div style="text-align: left;" data-aos="fade-right">
-                <h2 style="font-size: 2.5rem; font-weight: 800; color: #000; line-height: 1.2; margin: 0;">STRUKTUR</h2>
-                <h2 style="font-size: 2.5rem; font-weight: 800; color: #000; line-height: 1.2; margin: 0;">ORGANISASI</h2>
+                <h2 style="font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; color: #000; line-height: 1.2; margin: 0;">STRUKTUR</h2>
+                <h2 style="font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 800; color: #000; line-height: 1.2; margin: 0;">ORGANISASI</h2>
             </div>
-            <div data-aos="fade-left">
-                <img src="{{ asset('images/logo.jpeg') }}" alt="Logo Kiseki" style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+            <div data-aos="fade-left" style="margin-left: auto;">
+                <img src="{{ asset('images/logo.jpeg') }}" alt="Logo Kiseki" style="width: clamp(80px, 15vw, 120px); height: clamp(80px, 15vw, 120px); border-radius: 50%; border: 4px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
             </div>
         </div>
 
