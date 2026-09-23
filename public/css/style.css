@@ -878,7 +878,9 @@ footer {
 }
 
 .org-chart li {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     list-style-type: none;
     position: relative;
@@ -957,7 +959,9 @@ footer {
     background: transparent;
     border: none;
     box-shadow: none;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     text-align: center;
     z-index: 1;
@@ -987,7 +991,7 @@ footer {
     padding: 6px 20px; /* Kembalikan ukuran */
     border-radius: 20px;
     font-size: 0.85rem;
-    display: inline-block;
+    display: block;
     position: relative;
     z-index: 2;
     margin-bottom: -15px;
@@ -1025,10 +1029,10 @@ footer {
     padding: 6px 20px; /* Kembalikan ukuran besar */
     border-radius: 20px;
     font-size: 0.75rem;
-    display: inline-block;
+    display: block;
     position: relative;
     z-index: 2;
-    margin-top: -15px;
+    margin-top: -10px; /* Kurangi overlap agar foto tidak tertutup terlalu banyak */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     text-transform: uppercase;
     letter-spacing: 0.5px;
