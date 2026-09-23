@@ -25,10 +25,10 @@
             <ul>
                 <!-- Tingkat 1: Pembina -->
                 <li>
-                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="100" onclick="openStaffModal('PROF. DR. DIKY MUDHAKIR', 'PEMBINA', 'https://ui-avatars.com/api/?name=Diky+Mudhakir&background=f9a623&color=fff&size=100', 'Sebagai Pembina Yayasan Kiseki Indonesia, beliau memberikan arahan strategis dan pengawasan terhadap seluruh program pendidikan dan pelatihan agar senantiasa relevan dengan kebutuhan industri di Jepang.')">
+                    <div class="org-card" data-aos="zoom-in-up" data-aos-delay="100" onclick="openStaffModal('PROF. DR. DIKY MUDHAKIR', 'PEMBINA', '{{ asset('images/Sachou Diky.jpeg') }}', 'Sebagai Pembina Yayasan Kiseki Indonesia, beliau memberikan arahan strategis dan pengawasan terhadap seluruh program pendidikan dan pelatihan agar senantiasa relevan dengan kebutuhan industri di Jepang.')">
                         <div class="role-badge">PEMBINA</div>
                         <div class="img-container">
-                            <img src="https://ui-avatars.com/api/?name=Diky+Mudhakir&background=f9a623&color=fff&size=100" alt="Prof. Dr. Diky Mudhakir">
+                            <img src="{{ asset('images/Sachou Diky.jpeg') }}" alt="Prof. Dr. Diky Mudhakir">
                         </div>
                         <div class="name-badge">PROF. DR. DIKY MUDHAKIR</div>
                     </div>
@@ -36,10 +36,10 @@
                     <ul>
                         <!-- Tingkat 2: Direktur Utama -->
                         <li>
-                            <div class="org-card" data-aos="zoom-in-up" data-aos-delay="200" onclick="openStaffModal('ELLNOVIANTY NINE, M.HUM', 'DIREKTUR UTAMA', '{{ asset('images/Sachou.jpeg') }}', 'Bertanggung jawab penuh atas operasional LPK Kiseki Indonesia. Memastikan standar kurikulum bahasa Jepang dan kedisiplinan kerja sesuai dengan standar tinggi perusahaan Jepang.')">
+                            <div class="org-card" data-aos="zoom-in-up" data-aos-delay="200" onclick="openStaffModal('ELLNOVIANTY NINE, M.HUM', 'DIREKTUR UTAMA', '{{ asset('images/Sachou Novi.jpeg') }}', 'Bertanggung jawab penuh atas operasional LPK Kiseki Indonesia. Memastikan standar kurikulum bahasa Jepang dan kedisiplinan kerja sesuai dengan standar tinggi perusahaan Jepang.')">
                                 <div class="role-badge">DIREKTUR UTAMA</div>
                                 <div class="img-container">
-                                    <img src="{{ asset('images/Sachou.jpeg') }}" alt="Ellnovianty Nine, M.Hum">
+                                    <img src="{{ asset('images/Sachou Novi.jpeg') }}" alt="Ellnovianty Nine, M.Hum">
                                 </div>
                                 <div class="name-badge">ELLNOVIANTY NINE, M.HUM</div>
                             </div>
